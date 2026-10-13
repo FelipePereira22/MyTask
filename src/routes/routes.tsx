@@ -16,4 +16,8 @@ export const router = createBrowserRouter([
             </ProtectedRouter>
         )
     }
-])
+], 
+ {
+    basename: "/MyTask/"
+ }
+)

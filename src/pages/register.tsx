@@ -65,6 +65,7 @@ export default function Register() {
             value={password}
             onChange={(p) => setPassword(p.target.value)}
             required
+            minLength={8}
           />
           <input
             type="password"
@@ -72,6 +73,7 @@ export default function Register() {
             value={confirmPassword}
             onChange={(cp) => setConfirmPassword(cp.target.value)}
             required
+            minLength={8}
           />
           <button type="submit">Cadastrar</button>
           <p className="register">Já tem conta?
