@@ -1,0 +1,256 @@
+.listContainer {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: minmax(0, 1fr);
+  height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  padding: 20px 30px;
+  background: #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleSideBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 0 10px 4px;
+
+  h2 {
+    color: #f1f5f9;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.sidebarBox {
+  background: #f1f5f9;
+  height: 38vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 20px;
+  border-radius: 8px;
+
+  h4 {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 4px 0;
+  }
+
+  .listInput {
+    width: 100%;
+    padding: 8px 0 8px 10px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #1f1e1ed0;
+    color: #000;
+  }
+
+  .listButton {
+    width: 100%;
+    padding: 6px 0;
+    margin-top: 8px;
+    border-radius: 5px;
+    background: transparent;
+    color: #000;
+    border: 1px solid #1e293b;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .listButton:hover {
+    background: #1e293b;
+    color: #fff;
+  }
+  .listSelect {
+    width: 100%;
+    padding: 8px 0 8px 10px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #1f1e1ed0;
+    color: #000;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .listSelect,
+  .listSelect::picker(select) {
+    appearance: base-select;
+  }
+
+  .listSelect::picker(select) {
+    background: #f1f5f9;
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    padding: 4px;
+    position-area: block-end span-inline-end;
+    position-try-order: normal;
+    position-try-fallbacks: none;
+  }
+
+  .listSelect::picker-icon {
+    content: url("../assets/arrow.svg");
+    font-size: 1px;
+  }
+}
+
+.inputAndButton {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-rows: 60px minmax(0, 1fr);
+}
+
+.topbar {
+  background: #1e293b;
+
+  h2 {
+    color: #f1f5f9;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 600;
+  }
+}
+
+.toDo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  gap: 30px;
+  padding: 30px;
+  background: #f1f5f9;
+  overflow-y: auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #00000033;
+
+  h1 {
+    margin: 0 20px 16px;
+    text-align: left;
+    padding: 12px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 10px;
+    list-style: none;
+    padding: 10px 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .section {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+
+  .section ul {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 8px;
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 16px), transparent);
+  }
+
+  .section ul::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .section ul::-webkit-scrollbar-thumb {
+    background: #1e293b87;
+    border-radius: 4px;
+  }
+
+  .section ul::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .section ul::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  .section h4 {
+    align-self: flex-start;
+    flex-shrink: 0;
+    padding: 7px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: transparent;
+    color: #09133d;
+    box-shadow: 1px 1px 2px #36363687;
+    font-weight: 600;
+  }
+
+  .section.low h4 {
+    display: inline;
+  }
+
+  .section.low li {
+    border: 1px solid #2f82ffc9;
+  }
+  .section.medium h4 {
+    display: inline;
+  }
+
+  .section.medium li {
+    border: 1px solid #ffff1e;
+  }
+
+  .section.high h4 {
+    display: inline;
+  }
+
+  .section.high li {
+    border: 1px solid #ff22228a;
+  }
+}
+
+.acoes {
+  display: flex;
+  gap: 6px;
+}
+
+.buttonColumn {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  background: #1e293b;
+  cursor: pointer;
+}

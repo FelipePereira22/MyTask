@@ -1,0 +1,66 @@
+.loginContainer {
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f1f5f9;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  box-shadow: 1px 1px 7px #1e293b;
+  padding: 4rem;
+  background: #fff;
+  max-width: 50vw;
+  max-height: 50vh;
+
+  h2 {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+  }
+
+  button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .errorMessage {
+    font-size: 12px;
+    color: #fa2929;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.loginRegister {
+  font-size: 12px;
+  text-align: center;
+  
+  .btnRegister {
+    font-weight: 600;
+    text-decoration: none;
+    padding-left: 2px;
+    color: #1e293b;
+  }
+
+  .btnRegister:hover {
+    text-decoration: underline;
+  }
+}
