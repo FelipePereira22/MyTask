@@ -23,14 +23,14 @@ const priorities: { value: Priority; title: string }[] = [
 ];
 
 export default function ToDoList() {
+  const { user } = useAuth()
   const [tarefas, setTarefas] = useState<Tarefa[]>(() => {
-    const saveData = localStorage.getItem("tarefa");
+    const saveData = localStorage.getItem("tarefa" +  user?.uid);
     return saveData ? JSON.parse(saveData) : [];
   });
   const [input, setInput] = useState<string>("");
   const [priority, setPriority] = useState<Priority>("low");
-  const { user } = useAuth()
-
+  
   function addList(): void {
     if (input.trim() === "") {
       return alert("Preencha o campo para adicionar");
@@ -107,8 +107,8 @@ export default function ToDoList() {
   }
 
   useEffect(() => {
-    localStorage.setItem("tarefa", JSON.stringify(tarefas));
-  }, [tarefas]);
+    localStorage.setItem("tarefa" + user?.uid, JSON.stringify(tarefas));
+  }, [tarefas, user?.uid]);
 
   return (
     <>
